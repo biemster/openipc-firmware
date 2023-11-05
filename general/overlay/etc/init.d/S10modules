@@ -17,5 +17,8 @@ case "$1" in
 			# attempt to load modules
 			modprobe ${module} ${args} >/dev/null
 		done < /etc/modules
+
+		# load f23 stuff
+		load_jxf23 -i -sensor jxf23 -osmem 33 -total 64
 		;;
 esac
