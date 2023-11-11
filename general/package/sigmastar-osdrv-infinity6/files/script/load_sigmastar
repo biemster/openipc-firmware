@@ -16,7 +16,7 @@ detect_sensor() {
 
 set_sensor() {
   case ${SENSOR} in
-    gc2053)
+    gc2053|sc2239)
       insmod ${PATH_SENSOR}/sensor_${SENSOR}_mipi.ko chmap=1 lane_num=2 hdr_lane_num=2
       ;;
     imx307)
