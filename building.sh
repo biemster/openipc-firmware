@@ -97,7 +97,7 @@ clone() {
 }
 
 fresh() {
-  BR_VER=2023.02.1
+  BR_VER=2023.02.7
 
   if [ -d "$SRC_CACHE_DIR" ]; then
     echo_c 36 "Found cache directory."
@@ -127,7 +127,7 @@ fresh() {
   fi
 
   echo_c 34 "Downloading Buildroot sources to cache directory ..."
-  log_and_run "curl --continue-at - --output ${SRC_CACHE_DIR}/buildroot-${BR_VER}.tar.gz https://buildroot.org/downloads/buildroot-${BR_VER}.tar.gz"
+  log_and_run "curl --output ${SRC_CACHE_DIR}/buildroot-${BR_VER}.tar.gz https://buildroot.org/downloads/buildroot-${BR_VER}.tar.gz"
   echo_c 34 "Done.\n"
 
   echo_c 34 "Extracting a fresh copy of Buildroot from Buildroot sources ..."
